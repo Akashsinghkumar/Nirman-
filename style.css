@@ -2041,88 +2041,107 @@ body.background-black .theme-btn:not(.bg-white):hover i,
     overflow: hidden !important;
 }
 
+.hero-5 {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.hero-5 .hero-wrapper {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    overflow: hidden !important;
+}
+
 .hero-5 .hero-wrapper .hero-items {
     position: relative !important;
     overflow: hidden !important;
     border-radius: 0 !important;
+    min-height: 640px !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: center !important;
+    background: #0d0d0d !important;
 }
 
 .hero-5 .hero-wrapper .hero-items .hero-image {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
     width: 100% !important;
-    position: relative !important;
-    overflow: hidden !important;
+    height: 100% !important;
+    z-index: 1 !important;
 }
 
 .hero-5 .hero-wrapper .hero-items .hero-image img {
     width: 100% !important;
-    height: 520px !important;
+    height: 100% !important;
     object-fit: cover !important;
-    object-position: center 35% !important;
+    object-position: center 30% !important;
     display: block !important;
     filter: brightness(0.72) !important;
     transition: transform 0.6s ease !important;
 }
 
-@media (min-width: 1600px) {
-    .hero-5 .hero-wrapper .hero-items .hero-image img {
-        height: 640px !important;
-    }
+/* Semi-transparent dark overlay gradient over image so text is 100% crystal clear */
+.hero-5 .hero-wrapper .hero-items .hero-image::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(180deg, rgba(14, 14, 14, 0.15) 0%, rgba(14, 14, 14, 0.45) 50%, rgba(14, 14, 14, 0.88) 100%) !important;
+    z-index: 2 !important;
 }
 
-@media (max-width: 1399px) {
-    .hero-5 .hero-wrapper .hero-items .hero-image img {
-        height: 480px !important;
-    }
-}
-
-@media (max-width: 991px) {
-    .hero-5 .hero-wrapper .hero-items .hero-image img {
-        height: 420px !important;
-        object-position: center center !important;
-    }
-}
-
-@media (max-width: 575px) {
-    .hero-5 .hero-wrapper .hero-items .hero-image img {
-        height: 360px !important;
-        object-position: center center !important;
-    }
-}
-
-/* Hero Content Floating Overlay - Luxury Dark Glass Card */
+/* Hero Content Floating Overlay - Luxury Dark Glass Card directly OVER the full image */
 .hero-5 .hero-wrapper .hero-items .hero-content {
-    background: rgba(14, 14, 14, 0.94) !important;
+    background: rgba(14, 14, 14, 0.92) !important;
     backdrop-filter: blur(14px) !important;
     -webkit-backdrop-filter: blur(14px) !important;
     border: 1px solid rgba(255, 255, 255, 0.12) !important;
     border-left: 5px solid var(--theme, #dfa938) !important;
     border-radius: 12px !important;
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6) !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7) !important;
     max-width: 1080px !important;
-    margin: -100px auto 40px auto !important;
+    width: calc(100% - 60px) !important;
+    margin: 0 auto 50px auto !important;
     position: relative !important;
     z-index: 10 !important;
-    padding: 45px 60px !important;
+    padding: 35px 50px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+@media (min-width: 1600px) {
+    .hero-5 .hero-wrapper .hero-items {
+        min-height: 720px !important;
+    }
 }
 
 @media (max-width: 991px) {
+    .hero-5 .hero-wrapper .hero-items {
+        min-height: 540px !important;
+    }
     .hero-5 .hero-wrapper .hero-items .hero-content {
-        margin: -60px 20px 30px 20px !important;
-        padding: 35px 30px !important;
+        width: calc(100% - 30px) !important;
+        margin: 0 15px 30px 15px !important;
+        padding: 25px 25px !important;
     }
 }
 
 @media (max-width: 575px) {
+    .hero-5 .hero-wrapper .hero-items {
+        min-height: 480px !important;
+    }
     .hero-5 .hero-wrapper .hero-items .hero-content {
-        margin: -40px 15px 25px 15px !important;
-        padding: 25px 20px !important;
+        width: calc(100% - 20px) !important;
+        margin: 0 10px 20px 10px !important;
+        padding: 20px 18px !important;
     }
     .hero-5 .hero-wrapper .hero-items .hero-content h1 {
-        font-size: 26px !important;
+        font-size: 24px !important;
         line-height: 1.25 !important;
     }
     .hero-5 .hero-wrapper .hero-items .hero-content p {
-        font-size: 14px !important;
+        font-size: 13px !important;
     }
 }
 
