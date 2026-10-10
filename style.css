@@ -2018,3 +2018,334 @@ body.background-black .theme-btn:not(.bg-white):hover i,
 .client-logo-box:hover img {
     transform: scale(1.06) !important;
 }
+
+/* ==========================================================================
+   Hero Slider 5 - Full Width Responsive Image & Immersive Layout
+   Fix image cutting on all screens (mobile, tablet, laptop, desktop)
+   ========================================================================== */
+.hero-5 {
+    margin-top: 90px !important;
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+@media (max-width: 991px) {
+    .hero-5 {
+        margin-top: 70px !important;
+    }
+}
+
+.hero-5 .hero-wrapper {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    overflow: hidden !important;
+}
+
+.hero-5 .hero-wrapper .hero-items {
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 0 !important;
+}
+
+.hero-5 .hero-wrapper .hero-items .hero-image {
+    width: 100% !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.hero-5 .hero-wrapper .hero-items .hero-image img {
+    width: 100% !important;
+    height: 520px !important;
+    object-fit: cover !important;
+    object-position: center 35% !important;
+    display: block !important;
+    filter: brightness(0.72) !important;
+    transition: transform 0.6s ease !important;
+}
+
+@media (min-width: 1600px) {
+    .hero-5 .hero-wrapper .hero-items .hero-image img {
+        height: 640px !important;
+    }
+}
+
+@media (max-width: 1399px) {
+    .hero-5 .hero-wrapper .hero-items .hero-image img {
+        height: 480px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-5 .hero-wrapper .hero-items .hero-image img {
+        height: 420px !important;
+        object-position: center center !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .hero-5 .hero-wrapper .hero-items .hero-image img {
+        height: 360px !important;
+        object-position: center center !important;
+    }
+}
+
+/* Hero Content Floating Overlay - Luxury Dark Glass Card */
+.hero-5 .hero-wrapper .hero-items .hero-content {
+    background: rgba(14, 14, 14, 0.94) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-left: 5px solid var(--theme, #dfa938) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6) !important;
+    max-width: 1080px !important;
+    margin: -100px auto 40px auto !important;
+    position: relative !important;
+    z-index: 10 !important;
+    padding: 45px 60px !important;
+}
+
+@media (max-width: 991px) {
+    .hero-5 .hero-wrapper .hero-items .hero-content {
+        margin: -60px 20px 30px 20px !important;
+        padding: 35px 30px !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .hero-5 .hero-wrapper .hero-items .hero-content {
+        margin: -40px 15px 25px 15px !important;
+        padding: 25px 20px !important;
+    }
+    .hero-5 .hero-wrapper .hero-items .hero-content h1 {
+        font-size: 26px !important;
+        line-height: 1.25 !important;
+    }
+    .hero-5 .hero-wrapper .hero-items .hero-content p {
+        font-size: 14px !important;
+    }
+}
+
+/* ==========================================================================
+   Signature Landmarks Section - Spacing & Responsive Images
+   ========================================================================== */
+.portfolio-section {
+    padding-bottom: 80px !important;
+    position: relative !important;
+}
+
+.portfolio-wrapper-3 .project-image {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    background: #141414 !important;
+}
+
+.portfolio-wrapper-3 .project-image img {
+    width: 100% !important;
+    height: 380px !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    display: block !important;
+    transition: transform 0.5s ease !important;
+}
+
+@media (min-width: 1400px) {
+    .portfolio-wrapper-3 .project-image img {
+        height: 420px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .portfolio-wrapper-3 .project-image img {
+        height: 320px !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .portfolio-wrapper-3 .project-image img {
+        height: 240px !important;
+    }
+}
+
+/* ==========================================================================
+   Portfolio Showcase Section - Luxurious Spacing & Padding
+   Fix attachment/cramping with section above
+   ========================================================================== */
+.portfolio-showcase-section,
+.project-section {
+    padding-top: 110px !important;
+    padding-bottom: 120px !important;
+    position: relative !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+@media (max-width: 991px) {
+    .portfolio-showcase-section,
+    .project-section {
+        padding-top: 80px !important;
+        padding-bottom: 80px !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .portfolio-showcase-section,
+    .project-section {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+}
+
+.portfolio-showcase-section .section-title {
+    margin-bottom: 45px !important;
+}
+
+/* Portfolio Showcase Carousel Items - Responsive Images without Cropping */
+.project-carousel-items {
+    margin-top: 15px !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    background: #141414 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+    transition: transform 0.4s ease, border-color 0.4s ease !important;
+}
+
+.project-carousel-items:hover {
+    border-color: rgba(223, 169, 56, 0.5) !important;
+    transform: translateY(-4px) !important;
+}
+
+.project-carousel-items .project-image {
+    position: relative !important;
+    height: auto !important;
+    overflow: hidden !important;
+}
+
+.project-carousel-items .project-image img {
+    width: 100% !important;
+    height: 380px !important;
+    object-fit: cover !important;
+    object-position: center 35% !important;
+    display: block !important;
+    border-radius: 0 !important;
+    transition: transform 0.6s ease !important;
+}
+
+@media (min-width: 1600px) {
+    .project-carousel-items .project-image img {
+        height: 440px !important;
+    }
+}
+
+@media (max-width: 1199px) {
+    .project-carousel-items .project-image img {
+        height: 330px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .project-carousel-items .project-image {
+        height: auto !important;
+    }
+    .project-carousel-items .project-image img {
+        height: 270px !important;
+        object-position: center center !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-carousel-items .project-image img {
+        height: 220px !important;
+        object-position: center center !important;
+    }
+}
+
+.project-carousel-items:hover .project-image img {
+    transform: scale(1.05) !important;
+}
+
+/* Portfolio Showcase Content Overlay - Dark Luxury Theme */
+.project-carousel-items .project-image .project-content {
+    background: rgba(14, 14, 14, 0.94) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-left: 3px solid var(--theme, #dfa938) !important;
+    border-radius: 8px !important;
+    padding: 20px 24px !important;
+    left: 20px !important;
+    right: 20px !important;
+    bottom: -150px !important;
+    transition: all 0.4s ease-in-out !important;
+}
+
+.project-carousel-items:hover .project-image .project-content,
+.project-wrapper .swiper-slide.swiper-slide-active .project-carousel-items .project-image .project-content {
+    bottom: 20px !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.project-carousel-items .project-image .project-content h3 a {
+    color: #ffffff !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+}
+
+.project-carousel-items .project-image .project-content h3 a:hover {
+    color: var(--theme, #dfa938) !important;
+}
+
+.project-carousel-items .project-image .project-content p {
+    color: var(--theme, #dfa938) !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+    margin-bottom: 0 !important;
+}
+
+/* ==========================================================================
+   Project Grid (project.html) Responsive Image Heights
+   ========================================================================== */
+.portfolio-single-items {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    transition: transform 0.4s ease, border-color 0.4s ease !important;
+    background: #141414 !important;
+}
+
+.portfolio-single-items:hover {
+    border-color: rgba(223, 169, 56, 0.5) !important;
+    transform: translateY(-4px) !important;
+}
+
+.portfolio-single-items .portfolio-image {
+    background-size: cover !important;
+    background-position: center center !important;
+    position: relative !important;
+    height: 380px !important;
+    transition: transform 0.5s ease !important;
+}
+
+@media (min-width: 1400px) {
+    .portfolio-single-items .portfolio-image {
+        height: 420px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .portfolio-single-items .portfolio-image {
+        height: 320px !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .portfolio-single-items .portfolio-image {
+        height: 250px !important;
+    }
+}
+
