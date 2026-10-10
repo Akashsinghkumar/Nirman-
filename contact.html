@@ -712,15 +712,160 @@
         </div>
 
         
+        <!-- Large Thank You Popup Modal (Auto-closes in 5 seconds) -->
+        <div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content custom-dark-modal p-4 p-md-5 position-relative" style="background: radial-gradient(circle at center, #1c1c1c 0%, #111111 100%) !important; border: 1.5px solid rgba(223, 169, 56, 0.35) !important; border-radius: 16px !important; box-shadow: 0 25px 80px rgba(0,0,0,0.95), 0 0 40px rgba(223,169,56,0.15) !important;">
+                    
+                    <!-- Top Bar: Auto-close timer badge & Close button -->
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="badge px-3 py-2 rounded-pill" style="background: rgba(223, 169, 56, 0.12); color: #dfa938; border: 1px solid rgba(223, 169, 56, 0.3); font-size: 13px; font-weight: 600;">
+                            <i class="fas fa-clock me-1"></i> Closing in <span id="autoCloseSeconds" class="fw-bold">5</span>s
+                        </span>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" id="closeThankYouModalBtn" style="filter: invert(1); opacity: 0.8;"></button>
+                    </div>
+
+                    <!-- Progress Bar for 5s Timer -->
+                    <div class="progress mb-4" style="height: 4px; background: rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden;">
+                        <div id="thankYouProgressBar" class="progress-bar" role="progressbar" style="width: 100%; background: linear-gradient(90deg, #dfa938, #f7d286); transition: width 5s linear;"></div>
+                    </div>
+
+                    <div class="modal-body text-center p-0">
+                        <!-- Glowing Checkmark -->
+                        <div style="width: 85px; height: 85px; background: rgba(223, 169, 56, 0.12); border: 2px solid #dfa938; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 0 35px rgba(223, 169, 56, 0.35);">
+                            <i class="fas fa-check fa-2x" style="color: #dfa938;"></i>
+                        </div>
+
+                        <!-- Big Headline -->
+                        <h1 style="font-size: clamp(38px, 6vw, 56px); font-weight: 900; letter-spacing: 3px; background: linear-gradient(135deg, #dfa938 0%, #f7d286 50%, #b28221 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; line-height: 1.1;">
+                            THANK YOU!
+                        </h1>
+
+                        <h3 class="text-white mb-2" style="font-size: clamp(18px, 2.8vw, 24px); font-weight: 700;">
+                            Your Inquiry Has Been Received Successfully
+                        </h3>
+
+                        <p class="text-white-50 mx-auto mb-4" style="max-width: 620px; font-size: 15px; line-height: 1.7;">
+                            Director Ajay Gupta (IIT Roorkee) aur hamari engineering team aapke requirement ko review karke <strong class="text-white">24 ghante ke andar</strong> aapse connect karegi.
+                        </p>
+
+                        <!-- Urgent Project Consultation Card (From Image, No 3-step boxes) -->
+                        <div class="urgent-banner p-3 p-md-4 rounded mb-4 text-start" style="background: rgba(223, 169, 56, 0.08); border: 1px solid rgba(223, 169, 56, 0.3); border-radius: 12px;">
+                            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="icon me-3 rounded p-3 d-flex align-items-center justify-content-center" style="background: rgba(223, 169, 56, 0.2); color: #dfa938; width: 48px; height: 48px; flex-shrink: 0; border-radius: 8px !important;">
+                                        <i class="fas fa-bolt fa-lg"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-white mb-1" style="font-size: 16px; font-weight: 700;">Urgent Project Or Site Consultation?</h5>
+                                        <p class="text-white-50 small mb-0">Agar aapko turant baat karni hai ya drawings discuss karni hain, toh call desk par direct call karein:</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex gap-2 flex-wrap">
+                                    <a href="tel:+919935551326" class="theme-btn hover-white px-3 py-2" style="font-size: 13px; border-radius: 6px;">
+                                        <i class="fas fa-phone-alt me-1"></i> Call Director: +91 9935551326
+                                    </a>
+                                    <a href="mailto:nirmanconsultants@hotmail.com?subject=Project%20Drawings%20-%20Nirman%20Consultants" class="theme-btn hover-white px-3 py-2" style="font-size: 13px; background: transparent; border: 1px solid #dfa938; color: #dfa938; border-radius: 6px;">
+                                        <i class="fas fa-envelope me-1"></i> Send Drawings
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action Navigation Buttons (From User Image) -->
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <a href="index.html" class="theme-btn hover-white px-3 py-2" style="font-size: 14px; border-radius: 6px;">
+                                <i class="fas fa-home me-2"></i> Return To Homepage
+                            </a>
+                            <a href="project.html" class="theme-btn hover-white px-3 py-2" style="font-size: 14px; background: #222; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px;">
+                                <i class="fas fa-images me-2"></i> Explore 800+ Projects
+                            </a>
+                            <a href="service.html" class="theme-btn hover-white px-3 py-2" style="font-size: 14px; background: transparent; border: 1px solid #dfa938; color: #dfa938; border-radius: 6px;">
+                                <i class="fas fa-cogs me-2"></i> Browse Our Services
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script>
-            document.getElementById('contact-form')?.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const status = document.getElementById('form-status');
-                if(status) {
-                    status.classList.remove('d-none');
+            (function() {
+                const contactForm = document.getElementById('contact-form');
+                const thankYouModalEl = document.getElementById('thankYouModal');
+                let thankYouModal = null;
+                let countdownTimer = null;
+                let autoCloseTimer = null;
+
+                if (contactForm && thankYouModalEl) {
+                    thankYouModal = new bootstrap.Modal(thankYouModalEl, {
+                        backdrop: true,
+                        keyboard: true
+                    });
+
+                    contactForm.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        const submitBtn = this.querySelector('button[type="submit"]');
+                        const originalBtnHtml = submitBtn ? submitBtn.innerHTML : 'Submit Project Inquiry';
+
+                        if (submitBtn) {
+                            submitBtn.disabled = true;
+                            submitBtn.style.opacity = '0.85';
+                            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i> Submitting Inquiry...';
+                        }
+
+                        // Simulated submission and popup show
+                        setTimeout(function() {
+                            if (submitBtn) {
+                                submitBtn.disabled = false;
+                                submitBtn.style.opacity = '1';
+                                submitBtn.innerHTML = originalBtnHtml;
+                            }
+                            contactForm.reset();
+
+                            // Show the modal
+                            thankYouModal.show();
+
+                            // 5s Countdown and Progress Bar
+                            const secondsEl = document.getElementById('autoCloseSeconds');
+                            const progressBar = document.getElementById('thankYouProgressBar');
+                            let timeLeft = 5;
+
+                            if (secondsEl) secondsEl.textContent = '5';
+                            if (progressBar) {
+                                progressBar.style.transition = 'none';
+                                progressBar.style.width = '100%';
+                                setTimeout(function() {
+                                    progressBar.style.transition = 'width 5s linear';
+                                    progressBar.style.width = '0%';
+                                }, 50);
+                            }
+
+                            if (countdownTimer) clearInterval(countdownTimer);
+                            countdownTimer = setInterval(function() {
+                                timeLeft--;
+                                if (secondsEl) secondsEl.textContent = Math.max(0, timeLeft);
+                                if (timeLeft <= 0) {
+                                    clearInterval(countdownTimer);
+                                }
+                            }, 1000);
+
+                            if (autoCloseTimer) clearTimeout(autoCloseTimer);
+                            autoCloseTimer = setTimeout(function() {
+                                thankYouModal.hide();
+                            }, 5000);
+
+                        }, 400);
+                    });
+
+                    // Clear timer if closed manually
+                    thankYouModalEl.addEventListener('hidden.bs.modal', function () {
+                        if (countdownTimer) clearInterval(countdownTimer);
+                        if (autoCloseTimer) clearTimeout(autoCloseTimer);
+                    });
                 }
-                this.reset();
-            });
+            })();
         </script>
     </body>
 </html>
